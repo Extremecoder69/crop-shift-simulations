@@ -80,34 +80,34 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <Card className="bg-card">
               <CardContent className="p-6 text-center">
-                <div className="w-24 h-24 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center text-primary-foreground text-2xl font-bold">
-                  DR
+                <div className="w-24 h-24 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                  RC
                 </div>
-                <h4 className="font-semibold mb-1">Dr. Rebecca Martinez</h4>
-                <p className="text-sm text-primary mb-2">Chief Executive Officer</p>
-                <p className="text-sm text-muted-foreground">PhD in Agricultural Engineering, 15+ years in agtech innovation</p>
+                <h4 className="font-semibold mb-1 text-card-foreground">Rahul Chitturi</h4>
+                <p className="text-sm text-primary mb-2">Lead Developer & Co-Founder</p>
+                <p className="text-sm text-muted-foreground">BTech 4th Year Computer Science, VIT Vellore</p>
               </CardContent>
             </Card>
             
             <Card className="bg-card">
               <CardContent className="p-6 text-center">
-                <div className="w-24 h-24 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center text-primary-foreground text-2xl font-bold">
-                  AK
+                <div className="w-24 h-24 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                  NY
                 </div>
-                <h4 className="font-semibold mb-1">Alex Kumar</h4>
-                <p className="text-sm text-primary mb-2">Chief Technology Officer</p>
-                <p className="text-sm text-muted-foreground">Former AI researcher at Stanford, expert in machine learning for agriculture</p>
+                <h4 className="font-semibold mb-1 text-card-foreground">N. Yashwanth</h4>
+                <p className="text-sm text-primary mb-2">AI Engineer & Co-Founder</p>
+                <p className="text-sm text-muted-foreground">BTech 4th Year Computer Science, VIT Vellore</p>
               </CardContent>
             </Card>
             
             <Card className="bg-card">
               <CardContent className="p-6 text-center">
-                <div className="w-24 h-24 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center text-primary-foreground text-2xl font-bold">
-                  SJ
+                <div className="w-24 h-24 bg-gradient-hero rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                  SN
                 </div>
-                <h4 className="font-semibold mb-1">Sarah Johnson</h4>
-                <p className="text-sm text-primary mb-2">Head of Farmer Relations</p>
-                <p className="text-sm text-muted-foreground">Third-generation farmer turned advocate for agricultural technology adoption</p>
+                <h4 className="font-semibold mb-1 text-card-foreground">Saketh Notu</h4>
+                <p className="text-sm text-primary mb-2">Product Manager & Co-Founder</p>
+                <p className="text-sm text-muted-foreground">BTech 4th Year Computer Science, VIT Vellore</p>
               </CardContent>
             </Card>
           </div>
