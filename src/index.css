@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* CropShift Eco-Friendly Color Palette */
+    /* AltCrop Eco-Friendly Color Palette */
     --background: 60 100% 98%;
     --foreground: 120 25% 15%;
 
@@ -41,7 +41,7 @@ All colors MUST be HSL.
     --input: 120 20% 88%;
     --ring: 140 80% 25%;
 
-    /* CropShift Design Tokens */
+    /* AltCrop Design Tokens */
     --gradient-hero: linear-gradient(135deg, hsl(140 80% 25%), hsl(80 60% 45%));
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(60 30% 96%));
     --shadow-soft: 0 4px 20px -8px hsl(140 80% 25% / 0.15);
@@ -68,7 +68,7 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Dark Mode CropShift Theme */
+    /* Dark Mode AltCrop Theme */
     --background: 120 25% 8%;
     --foreground: 60 30% 95%;
 

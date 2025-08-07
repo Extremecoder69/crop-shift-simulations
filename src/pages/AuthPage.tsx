@@ -102,7 +102,7 @@ const AuthPage = () => {
     } else {
       toast({
         title: "Success",
-        description: "Welcome back to CropShift!",
+        description: "Welcome back to AltCrop!",
       });
     }
     
@@ -114,7 +114,7 @@ const AuthPage = () => {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-            CropShift
+            AltCrop
           </h1>
           <p className="text-muted-foreground mt-2">
             Join the future of smart farming

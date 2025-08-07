@@ -44,7 +44,7 @@ const Footer = () => {
         {/* Newsletter Section */}
         <div className="py-12 border-b border-primary-foreground/20">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4">Stay Updated with CropShift</h3>
+            <h3 className="text-2xl font-bold mb-4">Stay Updated with AltCrop</h3>
             <p className="text-primary-foreground/80 mb-6">
               Get the latest farming insights, AI updates, and seasonal tips delivered to your inbox.
             </p>
@@ -67,7 +67,7 @@ const Footer = () => {
             {/* Brand Column */}
             <div className="lg:col-span-2">
               <div className="flex items-center mb-4">
-                <span className="text-2xl font-bold text-accent">CropShift</span>
+                <span className="text-2xl font-bold text-accent">AltCrop</span>
               </div>
               <p className="text-primary-foreground/80 mb-6">
                 Empowering farmers worldwide with AI-driven insights and counterfactual analysis 
@@ -76,7 +76,7 @@ const Footer = () => {
               <div className="space-y-2">
                 <div className="flex items-center text-sm text-primary-foreground/80">
                   <Mail className="w-4 h-4 mr-2" />
-                  hello@cropshift.com
+                  hello@altcrop.com
                 </div>
                 <div className="flex items-center text-sm text-primary-foreground/80">
                   <Phone className="w-4 h-4 mr-2" />
@@ -164,7 +164,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="py-6 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-primary-foreground/80 mb-4 md:mb-0">
-            © 2024 CropShift. All rights reserved.
+            © 2024 AltCrop. All rights reserved.
           </div>
           
           {/* Social Links */}

@@ -21,7 +21,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-              CropShift
+              AltCrop
             </Link>
           </div>
 

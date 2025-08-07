@@ -10,7 +10,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "hello@cropshift.com",
+      content: "hello@altcrop.com",
       description: "We typically respond within 24 hours"
     },
     {
@@ -43,7 +43,7 @@ const Contact = () => {
             <span className="block text-primary">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Have questions about CropShift? Want to schedule a demo? 
+            Have questions about AltCrop? Want to schedule a demo? 
             Our team is here to help you revolutionize your farming operations.
           </p>
         </div>
@@ -85,7 +85,7 @@ const Contact = () => {
                 <Label htmlFor="message">Message</Label>
                 <Textarea 
                   id="message" 
-                  placeholder="Tell us about your farming operation and how CropShift can help..."
+                  placeholder="Tell us about your farming operation and how AltCrop can help..."
                   rows={5}
                 />
               </div>
@@ -131,7 +131,7 @@ const Contact = () => {
                 <div>
                   <h5 className="font-semibold mb-2">How long does it take to see results?</h5>
                   <p className="text-sm text-muted-foreground">
-                    Most farmers see valuable insights within the first week of using CropShift, 
+                    Most farmers see valuable insights within the first week of using AltCrop, 
                     with full benefits realized over a complete growing season.
                   </p>
                 </div>
@@ -148,7 +148,7 @@ const Contact = () => {
                   <h5 className="font-semibold mb-2">Do you offer training and support?</h5>
                   <p className="text-sm text-muted-foreground">
                     Yes! We provide comprehensive onboarding, training materials, 
-                    and ongoing support to ensure you get the most out of CropShift.
+                    and ongoing support to ensure you get the most out of AltCrop.
                   </p>
                 </div>
               </CardContent>

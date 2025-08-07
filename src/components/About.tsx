@@ -33,7 +33,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             About
-            <span className="block text-primary">CropShift</span>
+            <span className="block text-primary">AltCrop</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We're on a mission to democratize agricultural intelligence and empower 

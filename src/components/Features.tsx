@@ -61,7 +61,7 @@ const Features = () => {
             <span className="block text-primary">Smart Farming</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            CropShift combines cutting-edge technology with farmer-centric design to deliver 
+            AltCrop combines cutting-edge technology with farmer-centric design to deliver 
             the tools you need for successful, sustainable agriculture.
           </p>
         </div>
@@ -111,7 +111,7 @@ const Features = () => {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Farm?</h3>
               <p className="mb-6 text-primary-foreground/90">
-                Join thousands of farmers who are already making smarter decisions with CropShift.
+                Join thousands of farmers who are already making smarter decisions with AltCrop.
               </p>
               <Button variant="hero" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 Start Your Free Trial

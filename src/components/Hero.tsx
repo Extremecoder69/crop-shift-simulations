@@ -30,7 +30,7 @@ const Hero = () => {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto animate-fade-in">
-            CropShift uses cutting-edge AI and counterfactual analysis to help farmers explore 
+            AltCrop uses cutting-edge AI and counterfactual analysis to help farmers explore 
             "what-if" scenarios and make informed crop choices for maximum yield and sustainability.
           </p>
 

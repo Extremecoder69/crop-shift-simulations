@@ -9,14 +9,14 @@ const Testimonials = () => {
       role: "Organic Farmer, California",
       avatar: "/placeholder.svg",
       rating: 5,
-      quote: "CropShift helped me increase my tomato yield by 30% while reducing water usage. The what-if scenarios were game-changing for my decision-making process."
+      quote: "AltCrop helped me increase my tomato yield by 30% while reducing water usage. The what-if scenarios were game-changing for my decision-making process."
     },
     {
       name: "James Chen",
       role: "Corn & Soybean Farmer, Iowa",
       avatar: "/placeholder.svg", 
       rating: 5,
-      quote: "The AI recommendations saved me from a costly mistake last season. CropShift predicted the market downturn for corn and suggested diversifying into soybeans."
+      quote: "The AI recommendations saved me from a costly mistake last season. AltCrop predicted the market downturn for corn and suggested diversifying into soybeans."
     },
     {
       name: "Sarah Johnson",
@@ -30,7 +30,7 @@ const Testimonials = () => {
       role: "Mixed Crop Farmer, Brazil",
       avatar: "/placeholder.svg",
       rating: 5,
-      quote: "CropShift's counterfactual analysis helped me optimize my crop rotation. I'm seeing better soil health and higher profits than ever before."
+      quote: "AltCrop's counterfactual analysis helped me optimize my crop rotation. I'm seeing better soil health and higher profits than ever before."
     },
     {
       name: "Linda Thompson",
@@ -44,7 +44,7 @@ const Testimonials = () => {
       role: "Rice Farmer, India",
       avatar: "/placeholder.svg",
       rating: 5,
-      quote: "CropShift adapted to my local conditions perfectly. The AI learned from my farm's unique climate patterns and gave me incredibly accurate predictions."
+      quote: "AltCrop adapted to my local conditions perfectly. The AI learned from my farm's unique climate patterns and gave me incredibly accurate predictions."
     }
   ];
 
@@ -58,7 +58,7 @@ const Testimonials = () => {
             <span className="block text-primary">Worldwide</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            See how CropShift is empowering farmers across the globe to make better 
+            See how AltCrop is empowering farmers across the globe to make better 
             decisions and achieve greater success.
           </p>
         </div>
