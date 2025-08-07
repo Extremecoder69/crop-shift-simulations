@@ -14,7 +14,257 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      ai_recommendations: {
+        Row: {
+          applied_date: string | null
+          confidence_score: number | null
+          created_at: string
+          crop_id: string | null
+          description: string
+          expires_at: string | null
+          feedback_notes: string | null
+          feedback_rating: number | null
+          id: string
+          is_applied: boolean | null
+          priority: string | null
+          recommendation_type: string
+          title: string
+          user_id: string
+        }
+        Insert: {
+          applied_date?: string | null
+          confidence_score?: number | null
+          created_at?: string
+          crop_id?: string | null
+          description: string
+          expires_at?: string | null
+          feedback_notes?: string | null
+          feedback_rating?: number | null
+          id?: string
+          is_applied?: boolean | null
+          priority?: string | null
+          recommendation_type: string
+          title: string
+          user_id: string
+        }
+        Update: {
+          applied_date?: string | null
+          confidence_score?: number | null
+          created_at?: string
+          crop_id?: string | null
+          description?: string
+          expires_at?: string | null
+          feedback_notes?: string | null
+          feedback_rating?: number | null
+          id?: string
+          is_applied?: boolean | null
+          priority?: string | null
+          recommendation_type?: string
+          title?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ai_recommendations_crop_id_fkey"
+            columns: ["crop_id"]
+            isOneToOne: false
+            referencedRelation: "crops"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      crops: {
+        Row: {
+          area_planted: number | null
+          created_at: string
+          crop_name: string
+          expected_harvest_date: string | null
+          fertilizer_used: string | null
+          id: string
+          irrigation_method: string | null
+          location: string | null
+          notes: string | null
+          pesticide_used: string | null
+          planted_date: string | null
+          soil_type: string | null
+          status: string | null
+          updated_at: string
+          user_id: string
+          variety: string | null
+        }
+        Insert: {
+          area_planted?: number | null
+          created_at?: string
+          crop_name: string
+          expected_harvest_date?: string | null
+          fertilizer_used?: string | null
+          id?: string
+          irrigation_method?: string | null
+          location?: string | null
+          notes?: string | null
+          pesticide_used?: string | null
+          planted_date?: string | null
+          soil_type?: string | null
+          status?: string | null
+          updated_at?: string
+          user_id: string
+          variety?: string | null
+        }
+        Update: {
+          area_planted?: number | null
+          created_at?: string
+          crop_name?: string
+          expected_harvest_date?: string | null
+          fertilizer_used?: string | null
+          id?: string
+          irrigation_method?: string | null
+          location?: string | null
+          notes?: string | null
+          pesticide_used?: string | null
+          planted_date?: string | null
+          soil_type?: string | null
+          status?: string | null
+          updated_at?: string
+          user_id?: string
+          variety?: string | null
+        }
+        Relationships: []
+      }
+      market_prices: {
+        Row: {
+          created_at: string
+          crop_name: string
+          id: string
+          location: string
+          market_name: string | null
+          price_date: string
+          price_per_unit: number
+          quality_grade: string | null
+          source: string | null
+          unit: string
+          variety: string | null
+        }
+        Insert: {
+          created_at?: string
+          crop_name: string
+          id?: string
+          location: string
+          market_name?: string | null
+          price_date?: string
+          price_per_unit: number
+          quality_grade?: string | null
+          source?: string | null
+          unit?: string
+          variety?: string | null
+        }
+        Update: {
+          created_at?: string
+          crop_name?: string
+          id?: string
+          location?: string
+          market_name?: string | null
+          price_date?: string
+          price_per_unit?: number
+          quality_grade?: string | null
+          source?: string | null
+          unit?: string
+          variety?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          bio: string | null
+          created_at: string
+          crops_grown: string[] | null
+          email: string
+          farm_size: number | null
+          farm_type: string | null
+          full_name: string | null
+          id: string
+          location: string | null
+          phone: string | null
+          updated_at: string
+          user_id: string
+          years_farming: number | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          bio?: string | null
+          created_at?: string
+          crops_grown?: string[] | null
+          email: string
+          farm_size?: number | null
+          farm_type?: string | null
+          full_name?: string | null
+          id?: string
+          location?: string | null
+          phone?: string | null
+          updated_at?: string
+          user_id: string
+          years_farming?: number | null
+        }
+        Update: {
+          avatar_url?: string | null
+          bio?: string | null
+          created_at?: string
+          crops_grown?: string[] | null
+          email?: string
+          farm_size?: number | null
+          farm_type?: string | null
+          full_name?: string | null
+          id?: string
+          location?: string | null
+          phone?: string | null
+          updated_at?: string
+          user_id?: string
+          years_farming?: number | null
+        }
+        Relationships: []
+      }
+      weather_alerts: {
+        Row: {
+          alert_type: string
+          created_at: string
+          description: string
+          end_date: string | null
+          id: string
+          is_read: boolean | null
+          location: string | null
+          severity: string
+          start_date: string | null
+          title: string
+          user_id: string
+        }
+        Insert: {
+          alert_type: string
+          created_at?: string
+          description: string
+          end_date?: string | null
+          id?: string
+          is_read?: boolean | null
+          location?: string | null
+          severity: string
+          start_date?: string | null
+          title: string
+          user_id: string
+        }
+        Update: {
+          alert_type?: string
+          created_at?: string
+          description?: string
+          end_date?: string | null
+          id?: string
+          is_read?: boolean | null
+          location?: string | null
+          severity?: string
+          start_date?: string | null
+          title?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
