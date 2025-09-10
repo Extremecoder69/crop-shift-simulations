@@ -77,6 +77,23 @@ const AuthPage = () => {
     return { error };
   };
 
+  const signOut = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      toast({
+        title: "Error",
+        description: error.message,
+        variant: "destructive",
+      });
+    } else {
+      toast({
+        title: "Success",
+        description: "You have been logged out successfully.",
+      });
+      navigate('/');
+    }
+  };
+
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -160,112 +177,127 @@ const AuthPage = () => {
 
         <Card>
           <CardHeader>
-            <CardTitle>Get Started</CardTitle>
+            <CardTitle>{user ? "Account" : "Get Started"}</CardTitle>
             <CardDescription>
-              Sign in to your account or create a new one
+              {user ? `Welcome back, ${user.email}` : "Sign in to your account or create a new one"}
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Tabs defaultValue="signin" className="w-full">
-              <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="signin">Sign In</TabsTrigger>
-                <TabsTrigger value="signup">Sign Up</TabsTrigger>
-                <TabsTrigger value="reset">Reset</TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="signin">
-                <form onSubmit={handleSignIn} className="space-y-4">
-                  <div className="space-y-2">
-                    <label htmlFor="signin-email" className="text-sm font-medium">
-                      Email
-                    </label>
-                    <Input
-                      id="signin-email"
-                      type="email"
-                      placeholder="Enter your email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="signin-password" className="text-sm font-medium">
-                      Password
-                    </label>
-                    <Input
-                      id="signin-password"
-                      type="password"
-                      placeholder="Enter your password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                    />
-                  </div>
-                  <Button type="submit" className="w-full" disabled={loading}>
-                    {loading ? "Signing in..." : "Sign In"}
-                  </Button>
-                </form>
-              </TabsContent>
-              
-              <TabsContent value="signup">
-                <form onSubmit={handleSignUp} className="space-y-4">
-                  <div className="space-y-2">
-                    <label htmlFor="signup-email" className="text-sm font-medium">
-                      Email
-                    </label>
-                    <Input
-                      id="signup-email"
-                      type="email"
-                      placeholder="Enter your email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="signup-password" className="text-sm font-medium">
-                      Password
-                    </label>
-                    <Input
-                      id="signup-password"
-                      type="password"
-                      placeholder="Create a password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                      minLength={6}
-                    />
-                  </div>
-                  <Button type="submit" className="w-full" disabled={loading}>
-                    {loading ? "Creating account..." : "Create Account"}
-                  </Button>
-                </form>
-              </TabsContent>
-              
-              <TabsContent value="reset">
-                <form onSubmit={handleResetPassword} className="space-y-4">
-                  <div className="space-y-2">
-                    <label htmlFor="reset-email" className="text-sm font-medium">
-                      Email
-                    </label>
-                    <Input
-                      id="reset-email"
-                      type="email"
-                      placeholder="Enter your email"
-                      value={resetEmail}
-                      onChange={(e) => setResetEmail(e.target.value)}
-                      required
-                    />
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    We'll send you a password reset link
-                  </p>
-                  <Button type="submit" className="w-full" disabled={resetLoading}>
-                    {resetLoading ? "Sending..." : "Send Reset Link"}
-                  </Button>
-                </form>
-              </TabsContent>
-            </Tabs>
+            {user ? (
+              <div className="space-y-4 text-center">
+                <p className="text-muted-foreground">
+                  You are currently signed in.
+                </p>
+                <Button 
+                  onClick={signOut} 
+                  variant="destructive" 
+                  className="w-full"
+                >
+                  Sign Out
+                </Button>
+              </div>
+            ) : (
+              <Tabs defaultValue="signin" className="w-full">
+                <TabsList className="grid w-full grid-cols-3">
+                  <TabsTrigger value="signin">Sign In</TabsTrigger>
+                  <TabsTrigger value="signup">Sign Up</TabsTrigger>
+                  <TabsTrigger value="reset">Reset</TabsTrigger>
+                </TabsList>
+                
+                <TabsContent value="signin">
+                  <form onSubmit={handleSignIn} className="space-y-4">
+                    <div className="space-y-2">
+                      <label htmlFor="signin-email" className="text-sm font-medium">
+                        Email
+                      </label>
+                      <Input
+                        id="signin-email"
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="signin-password" className="text-sm font-medium">
+                        Password
+                      </label>
+                      <Input
+                        id="signin-password"
+                        type="password"
+                        placeholder="Enter your password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <Button type="submit" className="w-full" disabled={loading}>
+                      {loading ? "Signing in..." : "Sign In"}
+                    </Button>
+                  </form>
+                </TabsContent>
+                
+                <TabsContent value="signup">
+                  <form onSubmit={handleSignUp} className="space-y-4">
+                    <div className="space-y-2">
+                      <label htmlFor="signup-email" className="text-sm font-medium">
+                        Email
+                      </label>
+                      <Input
+                        id="signup-email"
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="signup-password" className="text-sm font-medium">
+                        Password
+                      </label>
+                      <Input
+                        id="signup-password"
+                        type="password"
+                        placeholder="Create a password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        minLength={6}
+                      />
+                    </div>
+                    <Button type="submit" className="w-full" disabled={loading}>
+                      {loading ? "Creating account..." : "Create Account"}
+                    </Button>
+                  </form>
+                </TabsContent>
+                
+                <TabsContent value="reset">
+                  <form onSubmit={handleResetPassword} className="space-y-4">
+                    <div className="space-y-2">
+                      <label htmlFor="reset-email" className="text-sm font-medium">
+                        Email
+                      </label>
+                      <Input
+                        id="reset-email"
+                        type="email"
+                        placeholder="Enter your email"
+                        value={resetEmail}
+                        onChange={(e) => setResetEmail(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      We'll send you a password reset link
+                    </p>
+                    <Button type="submit" className="w-full" disabled={resetLoading}>
+                      {resetLoading ? "Sending..." : "Send Reset Link"}
+                    </Button>
+                  </form>
+                </TabsContent>
+              </Tabs>
+            )}
           </CardContent>
         </Card>
         </div>
