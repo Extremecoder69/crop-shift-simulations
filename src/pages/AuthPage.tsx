@@ -26,11 +26,6 @@ const AuthPage = () => {
       (event, session) => {
         setSession(session);
         setUser(session?.user ?? null);
-        
-        // Redirect authenticated users to home
-        if (session?.user) {
-          navigate('/');
-        }
       }
     );
 
@@ -38,14 +33,10 @@ const AuthPage = () => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
       setUser(session?.user ?? null);
-      
-      if (session?.user) {
-        navigate('/');
-      }
     });
 
     return () => subscription.unsubscribe();
-  }, [navigate]);
+  }, []);
 
   const signUp = async (email: string, password: string) => {
     const redirectUrl = `${window.location.origin}/`;
